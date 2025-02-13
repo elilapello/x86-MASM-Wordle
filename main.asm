@@ -1,4 +1,4 @@
-TITLE Final_Project_Lapello.asm
+TITLE main.asm
 
 include irvine32.inc
 
@@ -126,7 +126,7 @@ mov edx, OFFSET quitPrompt ;//print option to quit
 call WriteString
 clearEAX
 call ReadDec ;//read user choice
-cmp al, 99 ;//if user enteers 99 quit the game
+cmp al, 99 ;//if user enters 99 quit the game
 je gameOver ;//if not play normally
 INVOKE twoPlayerGameRound, coinFlipResultGame ;//run a round
 cmp coinFlipResultGame, 0d ;//check which user went first
@@ -150,7 +150,7 @@ mov edx, OFFSET quitPrompt ;//print option to quit
 call WriteString
 clearEAX
 call ReadDec ;//read user choice
-cmp al, 99 ;//if user enteers 99 quit the game
+cmp al, 99 ;//if user enters 99 quit the game
 je gameOver ;//if not play normally
 mov coinFlipResultGame, 1d ;//swap to user 2 for round 2
 INVOKE twoPlayerGameRound, coinFlipResultGame
@@ -168,7 +168,7 @@ mov edx, OFFSET quitPrompt ;//print option to quit
 call WriteString
 clearEAX
 call ReadDec ;//read user choice
-cmp al, 99 ;//if user enteers 99 quit the game
+cmp al, 99 ;//if user enters 99 quit the game
 je gameOver ;//if not play normally
 mov coinFlipResultGame, 0d ;//swap to user 1 for round 2
 INVOKE twoPlayerGameRound, coinFlipResultGame
@@ -186,7 +186,7 @@ mov edx, OFFSET quitPrompt ;//print option to quit
 call WriteString
 clearEAX
 call ReadDec ;//read user choice
-cmp al, 99 ;//if user enteers 99 quit the game
+cmp al, 99 ;//if user enters 99 quit the game
 je gameOver ;//if not play normally
 mov coinFlipResultGame, 1d ;//swap to user 2 for round 3
 INVOKE twoPlayerGameRound, coinFlipResultGame
@@ -204,7 +204,7 @@ mov edx, OFFSET quitPrompt ;//print option to quit
 call WriteString
 clearEAX
 call ReadDec ;//read user choice
-cmp al, 99 ;//if user enteers 99 quit the game
+cmp al, 99 ;//if user enters 99 quit the game
 je gameOver ;//if not play normally
 mov coinFlipResultGame, 0d ;//swap to user 1 for round 3
 INVOKE twoPlayerGameRound, coinFlipResultGame
@@ -222,7 +222,7 @@ mov edx, OFFSET quitPrompt ;//print option to quit
 call WriteString
 clearEAX
 call ReadDec ;//read user choice
-cmp al, 99 ;//if user enteers 99 quit the game
+cmp al, 99 ;//if user enters 99 quit the game
 je gameOver ;//if not play normally
 mov coinFlipResultGame, 1d ;//swap to user 2 for round 4
 INVOKE twoPlayerGameRound, coinFlipResultGame
@@ -236,7 +236,7 @@ mov edx, OFFSET quitPrompt ;//print option to quit
 call WriteString
 clearEAX
 call ReadDec ;//read user choice
-cmp al, 99 ;//if user enteers 99 quit the game
+cmp al, 99 ;//if user enters 99 quit the game
 je gameOver ;//if not play normally
 mov coinFlipResultGame, 0d ;//swap to user 1 for round 4
 INVOKE twoPlayerGameRound, coinFlipResultGame
